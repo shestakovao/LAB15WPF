@@ -1,0 +1,448 @@
+﻿<Window x:Class="LAB15WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB15WPF"
+        mc:Ignorable="d"
+        Title="Компьютер" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Открыть" Click="MenuItem_Click_1">
+                    <MenuItem.Icon>
+                        <Image Source="DATA\open.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Сохранить" Click="MenuItem_Click_2">
+                    <MenuItem.Icon>
+                        <Image Source="DATA\save.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_Очистить" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="DATA\clear.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <FlowDocumentScrollViewer Grid.Row="1" Grid.Column="0" x:Name="docViewer">
+            <FlowDocument>
+                <Paragraph>
+                    <Hyperlink NavigateUri="https://www.ru.wikipedia.org/wiki/Компьютер">Компью́тер</Hyperlink> (англ.
+                    <Italic>computer</Italic> , МФА: [kəmˈpjuː.tə(ɹ)]
+                    <Run Typography.Variants="Superscript">[1]</Run> — «
+                    <Bold>вычислитель</Bold> », от лат.
+                    <Underline>computare</Underline> — считать, вычислять
+                    <Run Typography.Variants="Superscript">[2]</Run> ) — термин, пришедший в русский язык из иноязычных (в основном — английских) источников, одно из названий электронной вычислительной машины.
+                    <Run Typography.Variants="Superscript">[3]</Run> Используется в данном смысле в русском литературном языке,
+                    <Run Typography.Variants="Superscript">[4][5]</Run> научной, научно-популярной литературе.
+                    <Run Typography.Variants="Superscript">[6]</Run>
+                    Использование компьютеров для различных целей описывается терминами автоматизированный (например, автоматизированный контроль),[7] машинный (например, машинная графика),
+                    <Run Typography.Variants="Superscript">[8]</Run> вычислительный (например, вычислительная техника).
+                    <Run Typography.Variants="Superscript">[9]</Run>
+                </Paragraph>
+                <BlockUIContainer>
+                    <Image Width="300" Height="300" Source="DATA\COMP.jpg" HorizontalAlignment="Center"/>
+                </BlockUIContainer>
+                <Paragraph>
+                    <Span Background="Yellow">
+                        <Bold>Компьютерная система</Bold> — любое устройство или группа взаимосвязанных или смежных устройств, одно или более из которых, действуя в соответствии с программой, осуществляет автоматизированную обработку данных
+                        <Run Typography.Variants="Superscript">[10]</Run> .
+                    </Span>
+                </Paragraph>
+                <Paragraph TextAlignment="Center">
+                    <Bold>История</Bold>
+                </Paragraph>
+                <List MarkerStyle="Box">
+                    <ListItem>
+                        <Paragraph>
+                            3000 лет до н. э. — в Древнем Вавилоне были изобретены первые счёты — абак.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            500 лет до н. э. — в Китае появился более «современный» вариант абака с косточками на соломинках — суаньпань.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            87 год до н. э. — в Греции был изготовлен «антикитерский механизм» — механическое устройство на базе зубчатых передач, представляющее собой специализированный астрономический вычислитель.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            В XIII веке Луллий Раймунд создал логическую машину в виде бумажных кругов, построенных по троичной логике.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1492 год — Леонардо да Винчи в одном из своих дневников приводит эскиз 13-разрядного суммирующего устройства с десятизубцовыми кольцами. Хотя работающее устройство на базе этих чертежей было построено только в XX веке, всё же реальность проекта Леонардо да Винчи подтвердилась.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            XVI век — в России появились счёты, в которых было 10 деревянных шариков на проволоке.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1623 год — Вильгельм Шиккард, профессор университета Тюбингена, разрабатывает устройство на основе зубчатых колёс («считающие часы») для сложения и вычитания шестиразрядных десятичных чисел. Было ли устройство реализовано при жизни изобретателя, достоверно не известно, но в 1960 году оно было воссоздано и проявило себя вполне работоспособным.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1630 год — Уильям Отред и Ричард Деламейн создают круговую и прямоугольную логарифмические линейки.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Примерно в это же время Исаак Ньютон закладывает основы математического анализа.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1642 год — Блез Паскаль представляет «Паскалину» — первое реально осуществлённое и получившее известность механическое цифровое вычислительное устройство. Прототип устройства суммировал и вычитал пятиразрядные десятичные числа. Паскаль изготовил более десяти таких вычислителей, причём последние модели оперировали числами с восемью десятичными разрядами.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1673 год — известный немецкий философ и математик Готфрид Вильгельм Лейбниц построил арифмометр, который выполнял умножение, деление, сложение и вычитание. Позже Лейбниц описал двоичную систему счисления и обнаружил, что если записывать определённые группы двоичных чисел одно под другим, то нули и единицы в вертикальных столбцах будут регулярно повторяться, и это открытие навело его на мысль, что существуют совершенно новые законы математики. Лейбниц решил, что двоичный код оптимален для системы механики, которая может работать на основе перемежающихся активных и пассивных простых циклов. Он пытался применить двоичный код в механике и даже сделал чертёж вычислительной машины, работавшей на основе его новой математики, но вскоре понял, что технологические возможности его времени не позволяют создать такую машину
+                            <Run Typography.Variants="Superscript">[11]</Run> .
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1723 год — немецкий математик и астроном Христиан Людвиг Герстен на основе работ Лейбница создал арифметическую машину. Машина высчитывала частное и число последовательных операций сложения при умножении чисел. Кроме того, в ней была предусмотрена возможность контроля за правильностью ввода данных.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1786 год — немецкий военный инженер Иоганн Мюллер в ходе работ по усовершенствованию механического калькулятора на ступенчатых валиках Лейбница, придуманного его соотечественником Филиппом Хахном
+                            <Run Typography.Variants="Superscript">[12]</Run> , выдвигает идею «разностной машины» — специализированного арифмометра для табулирования логарифмов, вычисляемых разностным методом.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1801 год — Жозеф Мари Жаккар строит ткацкий станок с программным управлением, программа работы которого задаётся с помощью комплекта перфокарт.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1820 год — первый промышленный выпуск арифмометров. Первенство принадлежит французу Тома де Кольмару.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1822 год — английский математик Чарльз Бэббидж изобрёл, но не смог построить, первую разностную машину (специализированный арифмометр для автоматического построения математических таблиц) (см.: Разностная машина Чарльза Бэббиджа).
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1840 год — Томас Фаулер (англ. Great Torrington) построил деревянную троичную счётную машину с троичной симметричной системой счисления
+                            <Run Typography.Variants="Superscript">[13][14]</Run> .
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1855 год — братья Георг и Эдвард Шутц (англ. George  Edvard Scheutz) из Стокгольма построили первую разностную машину на основе работ Чарльза Бэббиджа.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1876 год — русским математиком П. Л. Чебышёвым создан суммирующий аппарат с непрерывной передачей десятков. В 1881 году он же сконструировал к нему приставку для умножения и деления (арифмометр Чебышёва).
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1884—1887 годы — Холлерит разработал электрическую табулирующую систему, которая использовалась в переписях населения США 1890 и 1900 годов и Российской империи в 1897 году.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1912 год — создана машина для интегрирования обыкновенных дифференциальных уравнений по проекту русского учёного А. Н. Крылова.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1927 год — в Массачусетском технологическом институте (MIT) Вэниваром Бушем был разработан механический аналоговый компьютер
+                            <Run Typography.Variants="Superscript">[15]</Run> .
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1938 год — немецкий инженер Конрад Цузе вскоре после окончания в 1935 году Берлинского политехнического института построил свою первую машину, названную Z1. (В качестве его соавтора упоминается также Гельмут Шрейер (нем. Helmut Schreyer)). Это полностью механическая программируемая цифровая машина. Модель была пробной и в практической работе не использовалась. Её восстановленная версия хранится в Немецком техническом музее в Берлине. В том же году Цузе приступил к созданию машины Z2 (Сначала эти компьютеры назывались V1 и V2. По-немецки это звучит «Фау-1» и «Фау-2» и чтобы их не путали с ракетами, компьютеры переименовали в Z1 и Z2).
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1941 год — Конрад Цузе создаёт первую вычислительную машину Z3, обладающую всеми свойствами современного компьютера.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1942 год — в Университете штата Айова Джон Атанасов и его аспирант Клиффорд Берри (англ. Clifford Berry) создали (а точнее — разработали и начали монтировать) первый в США электронный цифровой компьютер ABC. Хотя эта машина так и не была завершена (Атанасов ушёл в действующую армию), она, как пишут историки, оказала большое влияние на Джона Мокли, создавшего двумя годами позже ЭВМ ЭНИАК.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Конец 1943 года — заработала британская вычислительная машина специального назначения Colossus. Машина работала над расшифровкой секретных кодов фашистской Германии.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Февраль 1944 года — группой американских инженеров под руководством Говарда Эйкена закончена разработка первой американской вычислительной машины Марк I. После монтажа, наладки и испытаний она стала использоваться для выполнения сложных баллистических расчётов американского ВМФ.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1944 год — Конрад Цузе разработал ещё более быстрый компьютер Z4, а также первый язык программирования высокого уровня Планкалкюль.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1946 год — публике представлена первая универсальная электронная цифровая вычислительная машина ЭНИАК, разрабатывавшаяся секретно с 1943 года.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            4 декабря 1948 года — Государственный комитет Совета министров СССР по внедрению передовой техники в народное хозяйство зарегистрировал за номером 10475 изобретение И. С. Бруком и Б. И. Рамеевым цифровой электронной вычислительной машины.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1950 год — группой Лебедева в Киеве создана первая советская электронная вычислительная машина МЭСМ.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1957 год — американской фирмой NCR создан первый компьютер на транзисторах.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1958 год — Н. П. Брусенцов с группой единомышленников построил первую троичную ЭВМ с позиционной симметричной троичной системой счисления «Сетунь».
+                        </Paragraph>
+                    </ListItem>
+                </List>
+
+
+                <Paragraph TextAlignment="Center">
+                    <Run FontSize="20">Примечания</Run>
+                </Paragraph>
+
+                <Table BorderBrush="Aqua" BorderThickness="2" Margin="20" Padding="20">
+                    <Table.Columns>
+                        <TableColumn Width="0.3*"/>
+                        <TableColumn Width="1*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    <Bold>Номер примечания</Bold>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    <Bold>Источник</Bold>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    1
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Представлено британское произношение слова; также возможен американский вариант: [kəmˈpjuː.tɚ]. Нормативное произношение в русском языке: [kɐmˈpʲjʉtʲɪr]
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    2
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Словарь иностранных слов. — М.: «Русский язык», 1989. — 624 с. ISBN 5-200-00408-8
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    3
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Компьютер//Энциклопедия кибернетики. Том первый. Абс — Мир —Киев, Главная редакция украинской советской энциклопедии, 1974
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    4
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Предисловие ко второму изданию//Словарь русского языка в четырех томах. Том I А—И — М.: Русский язык, 1985.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    5
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Компьютер//Словарь русского языка в четырех томах. Том II К—О — М.: Русский язык, 1986.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    6
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Компьютер//Новый политехнический словарь/ Гл. ред. А. Ю. Ишлинский. — М.: Большая Российская энциклопедия, 2000.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    7
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    C.229 computer-aided tetsing//Толковый словарь по вычислительным системам = Dictionary of Computing / Под ред. В. Иллингуорта и др.: Пер. с англ. А. К. Белоцкого и др.; Под ред. Е. К. Масловского. — М.: Машиностроение, 1990. — 560 с. — 70 000 (доп.) экз. — ISBN 5-217-00617-X (СССР), ISBN 0-19-853913-4 (Великобритания).
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    8
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    C.235 computer graphics//Толковый словарь по вычислительным системам = Dictionary of Computing / Под ред. В. Иллингуорта и др.: Пер. с англ. А. К. Белоцкого и др.; Под ред. Е. К. Масловского. — М.: Машиностроение, 1990. — 560 с. — 70 000 (доп.) экз. — ISBN 5-217-00617-X (СССР), ISBN 0-19-853913-4 (Великобритания).
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    9
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    C.242 computer science//Толковый словарь по вычислительным системам = Dictionary of Computing / Под ред. В. Иллингуорта и др.: Пер. с англ. А. К. Белоцкого и др.; Под ред. Е. К. Масловского. — М.: Машиностроение, 1990. — 560 с. — 70 000 (доп.) экз. — ISBN 5-217-00617-X (СССР), ISBN 0-19-853913-4 (Великобритания).
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    10
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Конвенция о преступности в сфере компьютерной информации. Дата обращения: 9 октября 2016. Архивировано 10 ноября 2016 года.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    11
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Деятели философии. Жизнь и труды Лейбница. Дата обращения: 17 февраля 2012. Архивировано из оригинала 7 июля 2012 года.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    12
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    The calculating machines of Johann Helfrich Müller Архивная копия от 10 февраля 2012 на Wayback Machine (англ.)
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    13
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    The ternary calculating machine of Thomas Fowler. Дата обращения: 20 января 2012. Архивировано 20 января 2012 года.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    14
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Сайт Томаса Фоулера. Дата обращения: 20 января 2012. Архивировано 16 мая 2014 года.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Center">
+                                    15
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Blue" BorderThickness="1" Padding="5">
+                                <Paragraph TextAlignment="Justify">
+                                    Vannevar Bush’s Differential Analyzer Архивная копия от 15 апреля 2009 на Wayback Machine (англ.)
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DATA\clear.png" />
+    <None Remove="DATA\COMP.jpg" />
+    <None Remove="DATA\open.png" />
+    <None Remove="DATA\save.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DATA\clear.png" />
+    <Resource Include="DATA\COMP.jpg" />
+    <Resource Include="DATA\open.png" />
+    <Resource Include="DATA\save.png" />
+  </ItemGroup>
+
+</Project>
